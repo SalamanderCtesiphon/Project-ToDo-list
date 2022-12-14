@@ -1,0 +1,27 @@
+{
+  "name": "project-todo-list",
+  "version": "1.0.0",
+  "description": "An Odin Project assignment, that utilizes all of the concepts introduced up to this point. It uses Webpack as a module bundler, and incorporates the class based system in it's design.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalamanderCtesiphon/Project-ToDo-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalamanderCtesiphon/Project-ToDo-list/issues"
+  },
+  "homepage": "https://github.com/SalamanderCtesiphon/Project-ToDo-list#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
