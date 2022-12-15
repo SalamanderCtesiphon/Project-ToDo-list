@@ -22,6 +22,7 @@ function component() {
 
     header.textContent = 'To Do List';
     sidebar.textContent = 'Projects';
+    footer.textContent = `SeamusQuixote 2022`;
 
     document.body.appendChild(content);
   }
