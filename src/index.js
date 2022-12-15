@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import './style.css';
-import printMe from './print';
 
 function component() {
     const content = document.createElement('div');
     const header = document.createElement('div');
     const sidebar = document.createElement('div');
+    const sidebarHeader = document.createElement('div');
     const body = document.createElement('div');
     const footer = document.createElement('div');
     const projectsBtn = document.createElement('button');
@@ -19,7 +19,9 @@ function component() {
     footer.classList.add('footer');
     projectsBtn.classList.add('projectsBtn');
     toDoBtn.classList.add('toDoBtn');
+    sidebarHeader.classList.add('sidebarHeader');
 
+    sidebar.appendChild(sidebarHeader);
     sidebar.appendChild(projectsBtn);
     body.appendChild(toDoBtn);
 
@@ -29,13 +31,14 @@ function component() {
     content.appendChild(footer);
 
     header.textContent = 'To Do List';
-    sidebar.textContent = 'Projects';
+    sidebarHeader.textContent = 'Projects';
     footer.textContent = `SeamusQuixote 2022`;
     projectsBtn.textContent = 'Add New Project';
     toDoBtn.textContent = 'Add New To Do';
-    
+
 
     document.body.appendChild(content);
   }
   
   component();
+  

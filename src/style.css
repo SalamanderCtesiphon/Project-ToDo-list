@@ -40,15 +40,15 @@
   background-color: #9fa8b3a7;
 }
 
-.sidebarBtn {
-  width: 10ren;
-  height: 3rem;
+.projectsBtn {
+  
 }
 
 .body {
   background-color: #d5d9dec4;
   grid-column: 4 / 21;
   grid-row: 3 / 20;
+  padding: 1rem;
 
 }
 
