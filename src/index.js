@@ -37,9 +37,54 @@ function createProject() {
     projectList.splice(projectList.indexOf(newProject), 1);
   });
   selectProject.addEventListener('click', () => {
-    body.appendChild(li);
+      body.appendChild(createToDoForm(newProject));
   });
 }
+
+function createToDoForm(project) {
+  const form = document.createElement('form');
+  const name = document.createElement('input');
+  const dueDate = document.createElement('input');
+  const priority = document.createElement('input');
+  const notes = document.createElement('input');
+  const submit = document.createElement('input');
+
+  form.appendChild(name);
+  form.appendChild(dueDate);
+  form.appendChild(priority);
+  form.appendChild(notes);
+  form.appendChild(submit);
+
+  name.placeholder = 'Name';
+  dueDate.placeholder = 'Due Date';
+  priority.placeholder = 'Priority';
+  notes.placeholder = 'Notes';
+  submit.type = 'submit';
+  submit.value = 'Submit';
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const newToDo = new ToDo(
+      name.value,
+      dueDate.value,
+      priority.value,
+      notes.value
+    );
+    const body = document.querySelector('.body');
+    project.toDoList.push(newToDo);
+    document.createElement('div').textContent = ` name: ${newToDo.name}`;
+    document.createElement('div').textContent = ` dueDate: ${newToDo.dueDate}`;
+    document.createElement('div').textContent = ` priority: ${newToDo.priority}`;
+    document.createElement('div').textContent = ` notes: ${newToDo.notes}`;
+    body.appendChild(form);
+
+  });
+
+  return form;
+    
+}
+
+
 
 
 class ToDo {
