@@ -37,7 +37,13 @@ function createProject() {
     projectList.splice(projectList.indexOf(newProject), 1);
   });
   selectProject.addEventListener('click', () => {
-      body.appendChild(createToDoForm(newProject));
+      if (body.firstChild) {
+        body.removeChild(body.firstChild);
+        body.appendChild(createToDoForm(newProject));
+      } else {
+        body.appendChild(createToDoForm(newProject));
+      }
+
   });
 }
 
