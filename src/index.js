@@ -82,13 +82,22 @@ function createToDoForm(project) {
       notes.value
     );
     const body = document.querySelector('.body');
+    const toDoList = document.createElement('div');
+
     project.toDoList.push(newToDo);
 
     document.createElement('div').textContent = ` name: ${newToDo.name}`;
     document.createElement('div').textContent = ` dueDate: ${newToDo.dueDate}`;
     document.createElement('div').textContent = ` priority: ${newToDo.priority}`;
     document.createElement('div').textContent = ` notes: ${newToDo.notes}`;
-    body.appendChild(form);
+    toDoList.appendChild(projectTitle);
+    toDoList.appendChild(formTitle);
+    toDoList.appendChild(name);
+    toDoList.appendChild(dueDate);
+    toDoList.appendChild(priority);
+    toDoList.appendChild(notes);
+  
+    body.appendChild(toDoList);
 
   });
 
