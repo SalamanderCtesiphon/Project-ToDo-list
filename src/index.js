@@ -36,6 +36,9 @@ function createProject() {
     ul.removeChild(li);
     projectList.splice(projectList.indexOf(newProject), 1);
   });
+  selectProject.addEventListener('click', () => {
+    body.appendChild(li);
+  });
 }
 
 
