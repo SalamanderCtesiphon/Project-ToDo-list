@@ -57,7 +57,7 @@ function createToDoForm(project) {
   const dueDate = document.createElement('input');
   const priority = document.createElement('input');
   const notes = document.createElement('input');
-  const submit = document.createElement('input');
+  const submit = document.createElement('button');
 
   form.appendChild(projectTitle);
   form.appendChild(formTitle);
@@ -71,8 +71,7 @@ function createToDoForm(project) {
   dueDate.placeholder = 'Due Date';
   priority.placeholder = 'Priority';
   notes.placeholder = 'Notes';
-  submit.type = 'submit';
-  submit.value = 'Submit';
+  submit.textContent = 'Submit';
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();

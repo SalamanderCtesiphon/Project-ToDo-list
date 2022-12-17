@@ -63,3 +63,7 @@
   background-color: #788290c4;
 
 }
+
+button:hover {
+  cursor: pointer;
+}
