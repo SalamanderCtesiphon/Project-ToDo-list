@@ -48,6 +48,10 @@ function createProject() {
 }
 
 function createToDoForm(project) {
+  const projectTitle = document.createElement('div');
+  projectTitle.textContent = project.name;
+  const formTitle = document.createElement('div');
+  formTitle.textContent = 'Create New To Do';
   const form = document.createElement('form');
   const name = document.createElement('input');
   const dueDate = document.createElement('input');
@@ -55,6 +59,8 @@ function createToDoForm(project) {
   const notes = document.createElement('input');
   const submit = document.createElement('input');
 
+  form.appendChild(projectTitle);
+  form.appendChild(formTitle);
   form.appendChild(name);
   form.appendChild(dueDate);
   form.appendChild(priority);
@@ -78,6 +84,7 @@ function createToDoForm(project) {
     );
     const body = document.querySelector('.body');
     project.toDoList.push(newToDo);
+
     document.createElement('div').textContent = ` name: ${newToDo.name}`;
     document.createElement('div').textContent = ` dueDate: ${newToDo.dueDate}`;
     document.createElement('div').textContent = ` priority: ${newToDo.priority}`;
