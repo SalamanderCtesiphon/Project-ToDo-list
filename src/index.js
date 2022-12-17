@@ -96,7 +96,7 @@ function createToDoForm(project) {
     toDoList.appendChild(dueDate);
     toDoList.appendChild(priority);
     toDoList.appendChild(notes);
-  
+    
     body.appendChild(toDoList);
 
   });
